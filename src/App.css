@@ -1,0 +1,68 @@
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  width: 1100vw; 
+  height: 100vh;
+  will-change: transform;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 60px 80px;
+  flex-shrink: 0;
+  perspective: 2000px;
+}
+
+/* UI Elements */
+.progress-bar-global {
+  position: fixed; top: 0; left: 0; height: 5px; 
+  background: linear-gradient(90deg, #00E5C2, #0288D1);
+  z-index: 1000; transition: width 0.3s ease;
+}
+
+.nav-dots {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: row; gap: 16px; z-index: 100;
+}
+.nav-dot {
+  width: 14px; height: 14px; border-radius: 50%; background: rgba(255,255,255,0.2);
+  cursor: pointer; transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); border: none; padding: 0;
+}
+.nav-dot.active {
+  background: #00E5C2; box-shadow: 0 0 20px rgba(0, 229, 194, 0.6); transform: scale(1.5);
+}
+
+.keyboard-hint {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+  font-size: 16px; color: rgba(255,255,255,0.3); letter-spacing: 3px; z-index: 100;
+  display: flex; align-items: center; gap: 12px;
+}
+.key { padding: 6px 12px; border: 2px solid rgba(255,255,255,0.2); border-radius: 8px; font-weight: 700; }
+
+/* Slide Shared Components */
+.slide-number {
+  position: absolute; top: 50px; left: 80px; font-size: 24px; font-weight: 800; color: #00E5C2; letter-spacing: 4px;
+}
+.slide-label {
+  position: absolute; top: 54px; left: 150px; font-size: 20px; font-weight: 400; color: rgba(255,255,255,0.4); letter-spacing: 1.5px;
+}
+.brand-mark {
+  position: absolute; top: 40px; right: 80px; display: flex; align-items: center; gap: 16px;
+}
+.brand-mark img { height: 48px; object-fit: contain; }
+.brand-mark .brand-text { display: flex; flex-direction: column; text-align: right; }
+.brand-mark .brand-name { font-size: 28px; font-weight: 900; color: #fff; }
+.brand-mark .brand-name span { color: #00E5C2; }
+.brand-mark .brand-tagline { font-size: 11px; letter-spacing: 4px; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-top: 4px; }
