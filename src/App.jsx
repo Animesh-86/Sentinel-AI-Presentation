@@ -12,14 +12,15 @@ import SolutionSlide from './slides/SolutionSlide';
 import StatsSlide from './slides/StatsSlide';
 import JourneySlide from './slides/JourneySlide';
 import DemoSlide from './slides/DemoSlide';
+import RoadmapSlide from './slides/RoadmapSlide';
+import IntegrationsSlide from './slides/IntegrationsSlide';
 import ImpactSlide from './slides/ImpactSlide';
 import ScalabilitySlide from './slides/ScalabilitySlide';
-import RoadmapSlide from './slides/RoadmapSlide';
 import ClosingSlide from './slides/ClosingSlide';
 
 const slides = [
   HeroSlide, TeamSlide, ProblemSlide, SolutionSlide, StatsSlide,
-  JourneySlide, DemoSlide, RoadmapSlide, ImpactSlide, ScalabilitySlide, ClosingSlide
+  JourneySlide, DemoSlide, RoadmapSlide, IntegrationsSlide, ImpactSlide, ScalabilitySlide, ClosingSlide
 ];
 
 export default function App() {
