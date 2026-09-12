@@ -31,7 +31,7 @@ function AnimatedDonut({ percentage, text, color, isActive }) {
 export default function ImpactSlide({ isActive }) {
   return (
     <>
-      <BrandHeader slideNum="09" label="Impact & Outcomes" />
+      <BrandHeader slideNum="10" label="Impact & Outcomes" />
       
       <motion.div initial={{ y: 30, opacity: 0 }} animate={isActive ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }} transition={{ delay: 0.2, duration: 0.8 }} style={{ zIndex: 1, textAlign: 'center' }}>
         <h2 style={{ fontSize: '50px' }}>Impact that reaches <span className="accent">every layer.</span></h2>

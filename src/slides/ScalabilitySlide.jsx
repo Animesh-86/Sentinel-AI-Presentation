@@ -7,7 +7,7 @@ import GlassCard from '../components/GlassCard';
 export default function ScalabilitySlide({ isActive }) {
   return (
     <>
-      <BrandHeader slideNum="10" label="Scalability & Roadmap" />
+      <BrandHeader slideNum="11" label="Scalability & Roadmap" />
 
       <motion.div initial={{ y: 30, opacity: 0 }} animate={isActive ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }} transition={{ delay: 0.2, duration: 0.8 }} style={{ zIndex: 1, textAlign: 'center' }}>
         <h2>Building a more <span className="accent">resilient tomorrow.</span></h2>

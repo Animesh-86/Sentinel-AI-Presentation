@@ -47,7 +47,7 @@ export default function IntegrationsSlide({ isActive }) {
 
   return (
     <>
-      <BrandHeader slideNum="09" label="Behind the Solution" />
+      <BrandHeader slideNum="09" label="Live Demo" />
       
       <motion.div initial={{ y: 30, opacity: 0 }} animate={isActive ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }} transition={{ delay: 0.2, duration: 0.8 }} style={{ zIndex: 1, textAlign: 'center' }}>
         <h2>A Connected <span className="accent">Compliance Solution</span></h2>
