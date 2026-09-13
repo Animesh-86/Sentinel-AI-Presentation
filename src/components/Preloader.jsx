@@ -6,9 +6,21 @@ export default function Preloader({ onComplete }) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Very fast simulated loading process
+    // True asset preloading logic
+    const assetsToPreload = ['/mobile app.mp4', '/Sentinel_AI_promo_video_final.mp4'];
+    let assetsLoaded = false;
+    
+    Promise.all(assetsToPreload.map(src => fetch(src).then(res => res.blob()).catch(() => {})))
+      .then(() => {
+        assetsLoaded = true;
+      });
+
+    // Simulated loading progress that stalls at 95% if assets aren't ready
     const interval = setInterval(() => {
       setProgress(p => {
+        if (p >= 95 && !assetsLoaded) {
+          return 95; // Stall the loader until videos are fully cached
+        }
         if (p >= 100) {
           clearInterval(interval);
           setIsLoaded(true);
