@@ -110,21 +110,23 @@ export default function App() {
             ))}
           </nav>
 
-          <motion.main 
-            className="slider-container"
-            animate={{ x: `-${currentSlide * 100}vw` }}
-            transition={{ type: "spring", stiffness: 60, damping: 15 }}
-          >
-            {slides.map((SlideComponent, index) => (
-              <section key={index} className="slide" style={{ width: '1920px', height: '1080px', flexShrink: 0 }}>
-                <div className="slide-bg" />
-                <div className="slide-border" />
-                
-                {/* The active prop lets the slide know to trigger enter animations */}
-                <SlideComponent isActive={index === currentSlide} />
-              </section>
-            ))}
-          </motion.main>
+          {/* Cinematic Crossfade Slide Renderer */}
+          <AnimatePresence mode="wait">
+            <motion.section
+              key={currentSlide}
+              className="slide"
+              style={{ width: '1920px', height: '1080px', position: 'absolute', inset: 0 }}
+              initial={{ opacity: 0, scale: 0.95, filter: 'blur(8px)' }}
+              animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+              exit={{ opacity: 0, scale: 1.05, filter: 'blur(8px)' }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div className="slide-bg" />
+              <div className="slide-border" />
+              {React.createElement(slides[currentSlide], { isActive: true })}
+            </motion.section>
+          </AnimatePresence>
+
         </motion.div>
         )}
       </div>

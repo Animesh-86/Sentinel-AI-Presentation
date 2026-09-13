@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Globe, FileCheck, Landmark, Users, Scale, GraduationCap, FileText, Fingerprint } from 'lucide-react';
+import TypeWriter from '../components/TypeWriter';
 
 export default function ClosingSlide({ isActive }) {
   return (
@@ -48,7 +49,9 @@ export default function ClosingSlide({ isActive }) {
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'left' }}>
           <h2 style={{ fontSize: '50px', fontWeight: 600, marginBottom: '10px', lineHeight: 1.2, textAlign: 'left' }}>
             Because compliance <br />
-            <span className="accent">isn't a feature — it's a promise.</span>
+            <span className="accent">
+              <TypeWriter text="isn't a feature — it's a promise." speed={45} delay={600} isActive={isActive} />
+            </span>
           </h2>
           <div style={{ width: '50px', height: '4px', background: '#00E5C2', marginTop: '25px', marginBottom: '35px' }} />
           
