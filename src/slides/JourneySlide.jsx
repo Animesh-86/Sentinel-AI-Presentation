@@ -83,8 +83,8 @@ export default function JourneySlide({ isActive }) {
             <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
               <Globe size={40} color="#38bdf8" />
               <div>
-                <h4 style={{ fontSize: '20px', fontWeight: 'bold', color: '#fff', margin: 0 }}>Multi-language notifications</h4>
-                <p style={{ fontSize: '15px', color: '#94a3b8', margin: 0 }}>Updates in your preferred language</p>
+                <h4 style={{ fontSize: '20px', fontWeight: 'bold', color: '#fff', margin: 0 }}>Multi-language Portal</h4>
+                <p style={{ fontSize: '15px', color: '#94a3b8', margin: 0 }}>Switch the entire platform into your native language</p>
               </div>
             </div>
 
